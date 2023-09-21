@@ -10,7 +10,7 @@
 
     <p>Insira os dados nos campos abaixo:</p>
 
-<form>
+    <form>
         <label for="peso">Peso:</label>
         <input type="number" id="peso" placeholder="Digite seu peso" required>
         <br><br>
@@ -33,6 +33,19 @@
                 var imc = peso / (altura * altura);
                 var resultado = "Seu IMC é:  " + imc.toFixed(2);
 
+                if (imc < 18.5) {
+                    resultado += "  Voce esta abaixo do peso";
+                } else if (imc < 24.9) {
+                    resultado += "  seu peso é normal";
+                } else if (imc < 29.9) {
+                    resultado += "  voce esta com sobrepeso";
+                } else if (imc < 34.9) {
+                    resultado += "  voce possui Obesidade grau 1";
+                } else if (imc < 39.9) {
+                    resultado += "  voce possui Obesidade grau 2";
+                } else {
+                    resultado += "  voce possui Obesidade grau 3";
+                }
 
                 document.getElementById("resultado").innerHTML = resultado;
             } else {
@@ -41,7 +54,5 @@
         }
     </script>
 
-
 </body>
 </html>
-
