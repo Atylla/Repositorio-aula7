@@ -10,5 +10,19 @@
 
     <p>Insira os dados nos campos abaixo:</p>
 
+<form>
+        <label for="peso">Peso:</label>
+        <input type="number" id="peso" placeholder="Digite seu peso" required>
+        <br><br>
+
+        <label for="altura">Altura:</label>
+        <input type="number" id="altura" placeholder="Digite sua altura" required>
+        <br><br>
+
+        <input type="button" value="Calcular" onclick="calcularIMC()">
+    </form>
+
+    <div id="resultado"></div>
+
 </body>
 </html>
